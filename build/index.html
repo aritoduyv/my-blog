@@ -5,8 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Atlassian Blog - Chia sẻ kiến thức và xu hướng mới nhất</title>
     <meta name="description" content="Khám phá những xu hướng mới nhất, bài viết hấp dẫn và thông tin hữu ích từ các chuyên gia trong nhiều lĩnh vực khác nhau.">
-    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="favicon.png">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <!-- Header -->
@@ -14,32 +23,29 @@
         <div class="container">
             <nav class="nav">
                 <a href="/" class="logo">
-                    <span class="logo-icon">A</span>
+                    <span class="logo-square">A</span>
                     Atlassian Blog
                 </a>
                 
-                <div class="nav-links">
+                <div class="nav-menu">
                     <a href="/" class="nav-link active">Trang chủ</a>
                     <a href="/latest" class="nav-link">Bài viết mới</a>
-                    <div class="dropdown">
-                        <button class="dropdown-toggle">
-                            Danh mục
-                            <span class="dropdown-arrow">▼</span>
-                        </button>
-                        <div class="dropdown-menu">
-                            <a href="/category/technology" class="dropdown-item">Công nghệ</a>
-                            <a href="/category/design" class="dropdown-item">Thiết kế</a>
-                            <a href="/category/business" class="dropdown-item">Kinh doanh</a>
-                        </div>
-                    </div>
+                    <a href="/categories" class="nav-link">Danh mục</a>
                 </div>
-
+                
                 <div class="nav-actions">
-                    <button class="search-btn" aria-label="Search">
-                        <img src="icons/search.svg" alt="Search" width="20" height="20">
+                    <button class="btn-icon search-button" aria-label="Tìm kiếm">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                        </svg>
                     </button>
-                    <button class="menu-btn" aria-label="Menu">
-                        <img src="icons/menu.svg" alt="Menu" width="20" height="20">
+                    <button class="btn-icon menu-button md:hidden" aria-label="Menu" aria-expanded="false">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="3" y1="12" x2="21" y2="12"></line>
+                            <line x1="3" y1="6" x2="21" y2="6"></line>
+                            <line x1="3" y1="18" x2="21" y2="18"></line>
+                        </svg>
                     </button>
                 </div>
             </nav>
@@ -50,29 +56,31 @@
     <section class="hero">
         <div class="container">
             <div class="hero-grid">
-                <div class="featured-post main">
-                    <div class="post-overlay"></div>
+                <article class="hero-post">
                     <img src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg" 
-                         alt="Featured post" class="post-image">
-                    <div class="post-content">
-                        <a href="/category/technology" class="category-badge">Công nghệ</a>
-                        <h2 class="post-title">
-                            <a href="/post/getting-started">Hướng dẫn bắt đầu với công nghệ mới nhất</a>
-                        </h2>
-                        <p class="post-excerpt">
-                            Khám phá những xu hướng công nghệ mới nhất và cách áp dụng chúng vào dự án của bạn.
+                         alt="Công nghệ mới trong năm 2024"
+                         loading="lazy">
+                    <div class="hero-content">
+                        <a href="/category/technology" class="category-tag">Công nghệ</a>
+                        <h1 class="hero-title">
+                            <a href="/post/tech-trends-2024">Xu hướng công nghệ nổi bật trong năm 2024</a>
+                        </h1>
+                        <p class="hero-excerpt">
+                            Khám phá những xu hướng công nghệ mới nhất và cách chúng định hình tương lai của chúng ta.
                         </p>
                         <div class="post-meta">
                             <img src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg" 
-                                 alt="Author" class="author-avatar">
-                            <span class="author-name">John Doe</span>
-                            <span class="meta-divider">•</span>
-                            <span class="post-date">15 tháng 3, 2024</span>
-                            <span class="meta-divider">•</span>
-                            <span class="read-time">5 phút đọc</span>
+                                 alt="John Doe"
+                                 class="author-avatar"
+                                 loading="lazy">
+                            <span>John Doe</span>
+                            <span>•</span>
+                            <span>15 tháng 3, 2024</span>
+                            <span>•</span>
+                            <span>5 phút đọc</span>
                         </div>
                     </div>
-                </div>
+                </article>
             </div>
         </div>
     </section>
@@ -82,13 +90,11 @@
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title">Bài viết mới nhất</h2>
-                <a href="/latest" class="view-all">
-                    Xem tất cả
-                    <span class="arrow">→</span>
-                </a>
+                <a href="/latest" class="view-all">Xem tất cả →</a>
             </div>
+            
             <div class="posts-grid">
-                <!-- Post cards will be dynamically added here -->
+                <!-- Posts will be dynamically added here -->
             </div>
         </div>
     </section>
@@ -97,15 +103,20 @@
     <section class="newsletter">
         <div class="container">
             <div class="newsletter-box">
-                <h3>Đăng ký nhận bản tin</h3>
+                <h2 class="newsletter-title">Đăng ký nhận bản tin</h2>
                 <p>Nhận những bài viết mới nhất và thông tin hữu ích qua email hàng tuần.</p>
-                <form id="newsletter-form" class="newsletter-form">
-                    <input type="email" placeholder="Địa chỉ email của bạn" required>
-                    <button type="submit">Đăng ký</button>
+                
+                <form class="newsletter-form">
+                    <input type="email" 
+                           class="newsletter-input"
+                           placeholder="Email của bạn"
+                           required
+                           aria-label="Email">
+                    <button type="submit" class="newsletter-button">Đăng ký</button>
                 </form>
-                <p class="privacy-notice">
-                    Chúng tôi tôn trọng quyền riêng tư của bạn. Bạn có thể hủy đăng ký bất cứ lúc nào.
-                </p>
+                
+                <p class="form-message"></p>
+                <small>Bạn có thể hủy đăng ký bất cứ lúc nào.</small>
             </div>
         </div>
     </section>
@@ -115,19 +126,23 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-brand">
-                    <a href="/" class="footer-logo">
-                        <span class="logo-icon">A</span>
+                    <a href="/" class="logo">
+                        <span class="logo-square">A</span>
                         Atlassian Blog
                     </a>
-                    <p>Khám phá những xu hướng mới nhất, bài viết hấp dẫn và thông tin hữu ích.</p>
+                    <p class="footer-description">
+                        Khám phá những xu hướng mới nhất, bài viết hấp dẫn và thông tin hữu ích 
+                        từ các chuyên gia trong nhiều lĩnh vực khác nhau.
+                    </p>
                     <div class="social-links">
                         <a href="#" class="social-link">Facebook</a>
                         <a href="#" class="social-link">Twitter</a>
                         <a href="#" class="social-link">LinkedIn</a>
                     </div>
                 </div>
+                
                 <div class="footer-links">
-                    <h4>Liên kết nhanh</h4>
+                    <h3>Liên kết nhanh</h3>
                     <ul>
                         <li><a href="/">Trang chủ</a></li>
                         <li><a href="/latest">Bài viết mới</a></li>
@@ -135,7 +150,18 @@
                         <li><a href="/contact">Liên hệ</a></li>
                     </ul>
                 </div>
+                
+                <div class="footer-links">
+                    <h3>Danh mục</h3>
+                    <ul>
+                        <li><a href="/category/technology">Công nghệ</a></li>
+                        <li><a href="/category/design">Thiết kế</a></li>
+                        <li><a href="/category/business">Kinh doanh</a></li>
+                        <li><a href="/category/marketing">Marketing</a></li>
+                    </ul>
+                </div>
             </div>
+            
             <div class="footer-bottom">
                 <p>&copy; 2024 Atlassian Blog. Tất cả các quyền được bảo lưu.</p>
             </div>
