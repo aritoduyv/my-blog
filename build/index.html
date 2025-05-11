@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atlassian Blog - Chia sẻ kiến thức và xu hướng mới nhất</title>
+    <meta name="description" content="Khám phá những xu hướng mới nhất, bài viết hấp dẫn và thông tin hữu ích từ các chuyên gia trong nhiều lĩnh vực khác nhau.">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <a href="/" class="logo">
+                    <span class="logo-icon">A</span>
+                    Atlassian Blog
+                </a>
+                
+                <div class="nav-links">
+                    <a href="/" class="nav-link active">Trang chủ</a>
+                    <a href="/latest" class="nav-link">Bài viết mới</a>
+                    <div class="dropdown">
+                        <button class="dropdown-toggle">
+                            Danh mục
+                            <span class="dropdown-arrow">▼</span>
+                        </button>
+                        <div class="dropdown-menu">
+                            <a href="/category/technology" class="dropdown-item">Công nghệ</a>
+                            <a href="/category/design" class="dropdown-item">Thiết kế</a>
+                            <a href="/category/business" class="dropdown-item">Kinh doanh</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="nav-actions">
+                    <button class="search-btn" aria-label="Search">
+                        <img src="icons/search.svg" alt="Search" width="20" height="20">
+                    </button>
+                    <button class="menu-btn" aria-label="Menu">
+                        <img src="icons/menu.svg" alt="Menu" width="20" height="20">
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-grid">
+                <div class="featured-post main">
+                    <div class="post-overlay"></div>
+                    <img src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg" 
+                         alt="Featured post" class="post-image">
+                    <div class="post-content">
+                        <a href="/category/technology" class="category-badge">Công nghệ</a>
+                        <h2 class="post-title">
+                            <a href="/post/getting-started">Hướng dẫn bắt đầu với công nghệ mới nhất</a>
+                        </h2>
+                        <p class="post-excerpt">
+                            Khám phá những xu hướng công nghệ mới nhất và cách áp dụng chúng vào dự án của bạn.
+                        </p>
+                        <div class="post-meta">
+                            <img src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg" 
+                                 alt="Author" class="author-avatar">
+                            <span class="author-name">John Doe</span>
+                            <span class="meta-divider">•</span>
+                            <span class="post-date">15 tháng 3, 2024</span>
+                            <span class="meta-divider">•</span>
+                            <span class="read-time">5 phút đọc</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Latest Posts -->
+    <section class="latest-posts">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Bài viết mới nhất</h2>
+                <a href="/latest" class="view-all">
+                    Xem tất cả
+                    <span class="arrow">→</span>
+                </a>
+            </div>
+            <div class="posts-grid">
+                <!-- Post cards will be dynamically added here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-box">
+                <h3>Đăng ký nhận bản tin</h3>
+                <p>Nhận những bài viết mới nhất và thông tin hữu ích qua email hàng tuần.</p>
+                <form id="newsletter-form" class="newsletter-form">
+                    <input type="email" placeholder="Địa chỉ email của bạn" required>
+                    <button type="submit">Đăng ký</button>
+                </form>
+                <p class="privacy-notice">
+                    Chúng tôi tôn trọng quyền riêng tư của bạn. Bạn có thể hủy đăng ký bất cứ lúc nào.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="/" class="footer-logo">
+                        <span class="logo-icon">A</span>
+                        Atlassian Blog
+                    </a>
+                    <p>Khám phá những xu hướng mới nhất, bài viết hấp dẫn và thông tin hữu ích.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link">Facebook</a>
+                        <a href="#" class="social-link">Twitter</a>
+                        <a href="#" class="social-link">LinkedIn</a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Liên kết nhanh</h4>
+                    <ul>
+                        <li><a href="/">Trang chủ</a></li>
+                        <li><a href="/latest">Bài viết mới</a></li>
+                        <li><a href="/about">Về chúng tôi</a></li>
+                        <li><a href="/contact">Liên hệ</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Atlassian Blog. Tất cả các quyền được bảo lưu.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
